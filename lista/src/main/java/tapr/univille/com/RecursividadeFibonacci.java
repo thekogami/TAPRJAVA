@@ -1,24 +1,32 @@
 package tapr.univille.com;
 
 // Faça uma funçao recursiva que imprima o enésimo valor da sequencia de fibonatti
-// com Memoization
+// com Memoization  // data da aula 31/03/2025
+
+// 1) Defina Memoization  // data da aula 04/04/2025
+// Memoization é uma técnica de otimização que armazena os resultados de chamadas de função
+// para evitar cálculos repetidos. Em vez de recalcular o resultado para entradas já conhecidas,
+// a função armazena o resultado em uma estrutura de dados (como um array ou um dicionário)
+// e, quando a função é chamada novamente com a mesma entrada, ela retorna o resultado armazenado.
+
+// 2) Escreva a funcao de fibonatti com recursividade e memoization
 
 public class RecursividadeFibonacci {
 
   private static int cont;
-  private static int[] memo;
+  private static long[] memo;
 
   public static void main(String[] args) {
     int n = 50;
-    memo = new int[n + 1]; // Array para armazenar os valores já calculados
+    memo = new long[n + 1]; // Array para armazenar os valores já calculados
     for (int i = 0; i <= n; i++) {
       memo[i] = -1; // Inicializa o array com -1 para indicar valores não calculados
     }
-    System.out.println(fibo(n));
-    System.out.println(cont);
+    System.out.println("50º termo: " + fibo(n));
+    System.out.println("Número de chamadas recursivas: " + cont);
   }
 
-  public static int fibo(int n) {
+  public static long fibo(int n) {
     cont++;
     if (n <= 1) {
       return n;
