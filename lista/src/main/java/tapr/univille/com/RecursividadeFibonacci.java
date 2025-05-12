@@ -13,8 +13,8 @@ package tapr.univille.com;
 
 public class RecursividadeFibonacci {
 
-  private static int cont;
-  private static long[] memo;
+  private static int cont; // conta quantas vezes fibo() foi chamada
+  private static long[] memo; // array pra guardar os valores já calculados
 
   public static void main(String[] args) {
     int n = 50;
