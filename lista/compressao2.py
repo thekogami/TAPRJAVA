@@ -46,7 +46,7 @@ def main():
     # Converte para binário
     binario = bits_para_bytes(bits)
 
-    salvar_arquivo_binario("arquivo1.txt.squeezed", binario, codificacao)
+    salvar_arquivo_binario("arquivo2.txt.squeezed", binario, codificacao)
 
     # Exibe o hash MD5 do texto original para comparação futura
     print("MD5 original:", hashlib.md5(texto.encode()).hexdigest())

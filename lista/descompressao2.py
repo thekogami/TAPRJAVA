@@ -39,7 +39,7 @@ def descompactar(bits, mapa_decodificacao):
 
 def main():
     # Lê os dados do arquivo .squeezed
-    caracteres, binario = ler_cabecalho_e_dados("arquivo1.txt.squeezed")
+    caracteres, binario = ler_cabecalho_e_dados("arquivo2.txt.squeezed")
 
     # Converte o binário em bits e remove o padding
     bits = bytes_para_bits(binario)
